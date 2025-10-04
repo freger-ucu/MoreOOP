@@ -33,3 +33,21 @@ Implement the heroes game in text mode
    - methods: Character createCharacter() { returns random instance of any existing character } 
 - class GameManager
    - methods: void fight(Character c1, Character c2) { to provide fight between to characters and explain via command line what happens during fight, till both of the characters are alive } 
+
+## Completion
+
+Status: Completed
+
+Completed by Mykhailo Rykhalskyi.
+
+## Implementation Summary
+- Characters implemented: `Hobbit`, `Elf`, `King`, `Knight` extending `lotr.Character`.
+- Strategy pattern for kicks: `lotr.kick.*` (e.g., `ElfKick`, `PowerToHpKick`).
+- Reflection-based `CharacterFactory` discovers character subclasses automatically.
+- `GameManager` provides narrated fight loop with safeguards against infinite fights.
+
+## How To Run
+- Run tests: `mvn test`
+- Run demo from CLI:
+  - `mvn -q -DskipTests compile`
+  - `java -cp target/classes Demo`
